@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.home-page {
+    margin-top: 200px;
+}
+.home-page header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.home-page main section:first-of-type {
+    margin: 30px 15px;
+    padding: 0;
+}
+.home-page main section:nth-of-type(2) {
+    transition: transform 0.4s ease;
+}
+.home-page main section:nth-of-type(2):hover {
+    transform: translateX(2vw);
+}
+.home-page footer {
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    outline: none;
+}
+.home-page footer:focus {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    transition-delay: 2s;
+}
+.home-page main section:nth-of-type(2) p::first-letter {
+    color: darkgreen;
+    text-shadow: 2px 2px 3px rgba(0, 100, 0, 0.5);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.courses-page {
+    margin-top: 150px;
+}
+.courses-page header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: 2px solid #eee;
+    padding-top: 10px;
+}
+.courses-page article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-top: 2px solid darkmagenta;
+    border-bottom: 2px solid darkmagenta;
+    border-right: thin solid darkmagenta;
+    border-left: dashed darkmagenta;
+}
+.courses-page article h4 {
+    font-weight: 900;
+    font-size: 1.4em;
+    font-style: italic;
+    color: #333;
+}
+.courses-page article img {
+    transition: filter 0.3s ease;
+}
+.courses-page article img:hover {
+    filter: saturate(150%);
+}
+.courses-page a:visited {
+    color: darkred;
+}
+.courses-page a:link {
+    color: blue;
+}

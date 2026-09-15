@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок - Пізнайко</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<header>
+    <h2>Форма зворотнього зв'язку</h2>
+</header>
+<hr>
+<main>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Персональна інформація</legend>
+
+            <label for="parent-name">Прізвище та ім’я батьків:</label><br>
+            <input type="text" id="parent-name" name="parent-name" required><br><br>
+
+            <label for="parent-email">E-mail батьків:</label><br>
+            <input type="email" id="parent-email" name="parent-email" required><br><br>
+
+            <label for="child-age">Вік дитини (років):</label><br>
+            <input type="number" id="child-age" name="child-age" min="1" max="18" required><br><br>
+
+            <label>Стать дитини:</label><br>
+            <input type="radio" id="gender-boy" name="child-gender" value="Хлопчик" required>
+            <label for="gender-boy">Хлопчик</label>
+            <input type="radio" id="gender-girl" name="child-gender" value="Дівчинка" required>
+            <label for="gender-girl">Дівчинка</label>
+        </fieldset>
+        <br>
+        <label for="feedback-purpose">Мета зворотнього зв’язку:</label><br>
+        <select id="feedback-purpose" name="feedback-purpose" required>
+            <option value="співпраця">Співпраця</option>
+            <option value="скарга">Скарга на неякісний контент</option>
+            <option value="пропозиція">Пропозиція</option>
+            <option value="помилка">Наявність помилки</option>
+        </select><br><br>
+
+        <label for="details">Детально:</label><br>
+        <textarea id="details" name="details" rows="7" cols="60" maxlength="1000" placeholder="Введіть ваше повідомлення (до 1000 символів)..." required></textarea><br><br>
+
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">Даю згоду на обробку моїх персональних даних</label><br><br>
+
+        <button type="submit">Відправити форму</button>
+    </form>
+    <br>
+    <hr>
+    <a href="index.html"><button>Перейти на Головну сторінку</button></a>
+</main>
+</body>
+</html>
