@@ -72,10 +72,85 @@ body {
 }
 .courses-page article img:hover {
     filter: saturate(150%);
+    cursor: pointer;
 }
 .courses-page a:visited {
     color: darkred;
 }
 .courses-page a:link {
     color: blue;
+}
+
+.feedback-page main {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+.feedback-page form {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+.feedback-page fieldset {
+    order: 1;
+    flex-basis: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid darkmagenta;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.feedback-page form > label[for="feedback-purpose"] { order: 2; flex-basis: 100%; font-weight: bold; margin-top: 10px;}
+.feedback-page form > select { order: 3; flex-basis: 100%; padding: 5px; margin-bottom: 10px;}
+.feedback-page form > label[for="details"] { order: 4; flex-basis: 100%; font-weight: bold;}
+.feedback-page form > textarea { order: 5; flex-basis: 100%; margin-bottom: 15px;}
+
+
+.feedback-page form > input[type="checkbox"] {
+    order: 6;
+    align-self: center;
+    margin-right: 5px;
+}
+.feedback-page form > label[for="consent"] {
+    order: 7;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.feedback-page form > button[type="submit"] {
+    order: 8;
+    flex-basis: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.feedback-page form > button[type="submit"]:hover {
+    background-color: green;
+}
+
+.feedback-page main > a {
+    margin-top: 20px;
+    align-self: center;
 }
