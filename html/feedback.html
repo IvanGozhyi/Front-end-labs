@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зворотній зв'язок - Пізнайко</title>
+    <link rel="stylesheet" href="../css/Normalize.css">
+    <link rel="stylesheet" href="../css/Reset.css">
     <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 <body class="feedback-page">
 <header>
@@ -41,7 +44,12 @@
         </select><br><br>
 
         <label for="details">Детально:</label><br>
-        <textarea id="details" name="details" rows="7" cols="60" maxlength="1000" placeholder="Введіть ваше повідомлення (до 1000 символів)..." required></textarea><br><br>
+
+
+        <div class="textarea-wrapper">
+            <textarea id="details" name="details" rows="7" cols="60" maxlength="1000" placeholder="Введіть ваше повідомлення (до 1000 символів)..." required></textarea>
+            <div class="tooltip">Ваша думка для нас важлива! Конкретизуйте мету звернення, будь ласка.</div>
+        </div>
 
         <input type="checkbox" id="consent" name="consent" required>
         <label for="consent">Даю згоду на обробку моїх персональних даних</label><br><br>
@@ -52,5 +60,7 @@
     <hr>
     <a href="index.html"><button>Перейти на Головну сторінку</button></a>
 </main>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

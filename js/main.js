@@ -101,7 +101,15 @@ let Course_list = [
     }
 ];
 
-function getMinutes(durationStr) {
+let allIn1staDay = (courses) => {
+    let totalViewers = courses.reduce((sum, course) => sum + course.q_of_viewers_1, 0);
+    console.log(`\n=== Загальна кількість користувачів за добу_1: ${totalViewers} ===`);
+}
+
+
+allIn1staDay(Course_list)
+
+let getMinutes = (durationStr) => {
     if (!durationStr) return 0;
     let hours = 0, minutes = 0;
     let hMatch = durationStr.match(/(\d+)\s*год/);
@@ -123,7 +131,7 @@ console.log(`Середня кількість користувачів (за д
 let minCourse = Course_list.reduce((min, course) => (course.q_of_viewers_2 < min.q_of_viewers_2) ? course : min);
 console.log(`2. ID курсу з мінімумом переглядів за добу_2: ${minCourse.id} (Кількість: ${minCourse.q_of_viewers_2})`);
 
-function addNewCourse(newCourse) {
+let addNewCourse = (newCourse)=> {
     let isMissingInfo = Object.values(newCourse).some(val =>
         val === undefined || val === null || val === "" || (Array.isArray(val) && val.length === 0)
     );
@@ -205,7 +213,7 @@ class FeedbackManager {
             (currentAcc.age < minAcc.age) ? currentAcc : minAcc
         );
 
-        console.log(`Вік: ${youngest.age} роки(ів)`);
+        console.log(`Вік: ${youngest.age} рік/років`);
         console.log(`E-mail батьків: ${youngest.email}`);
         console.log(`Дата звернення: ${youngest.contactDate.toLocaleDateString('uk-UA')}`);
     }
@@ -254,3 +262,4 @@ manager.getByMonthAndTime(10, "14:30");
 manager.getYoungestChildInfo();
 manager.categorizeByAge();
 manager.sortByEmail();
+

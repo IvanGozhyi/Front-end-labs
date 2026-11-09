@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна - Дитячий навчальний портал</title>
+    <link rel="stylesheet" href="../css/Normalize.css">
+    <link rel="stylesheet" href="../css/Reset.css">
     <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 <body class="home-page">
 <header>
-    <img src="logo.png" alt="Логотип порталу Пізнайко" width="100">
-    <h1>Дитячий веб-портал «Пізнайко»</h1>
-    <nav>
-        <a href="courses.html"><button>Навчальні матеріали</button></a>
-        <a href="feedback.html"><button>Зворотній зв’язок</button></a>
-    </nav>
-    <br>
-    <div>
-        <button>Перейти у власний кабінет</button>
-        <button>Зареєструватись</button>
+    <div id="toys-container"></div>
+
+    <div class="header-content">
+        <div class="logo-section">
+            <img src="../public/3.png" alt="Логотип порталу Пізнайко" width="100">
+            <h1 id="portal-title">Дитячий веб-портал «Пізнайко»</h1>
+        </div>
+
+        <!-- Burger icon -->
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation and buttons wrapper -->
+        <div class="nav-menu" id="nav-menu">
+            <nav>
+                <a href="courses.html"><button>Навчальні матеріали</button></a>
+                <a href="feedback.html"><button>Зворотній зв’язок</button></a>
+            </nav>
+            <div class="auth-buttons">
+                <button>Перейти у власний кабінет</button>
+                <button>Зареєструватись</button>
+            </div>
+        </div>
     </div>
 </header>
 <hr>
@@ -52,14 +71,29 @@
             </tr>
             <tr>
                 <td>Читання та мова</td>
-
             </tr>
             <tr>
                 <td colspan="2">Світ навколо нас
-               Природознавство, тварини, рослини, пори року.</td>
+                    Природознавство, тварини, рослини, пори року.</td>
             </tr>
             </tbody>
         </table>
+    </section>
+
+
+    <section class="author-section">
+        <h2>Автор курсу</h2>
+        <div class="author-card">
+            <div class="author-card-inner">
+                <div class="author-card-front">
+                    <img src="../public/author.png" alt="Фото автора" width="100">
+                    <p><strong>Іван Гожий</strong></p>
+                </div>
+                <div class="author-card-back">
+                    <p><em>"Навчання через гру — це шлях до зірок!"</em></p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 <hr>
@@ -67,5 +101,7 @@
     <p><strong>Адреса:</strong> м. Київ, вул. Освітня, буд. 10</p>
     <p><strong>Контактні телефони:</strong> +38 (044) 123-45-67, +38 (099) 765-43-21</p>
 </footer>
+<script src="../js/script.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
